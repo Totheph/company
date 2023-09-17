@@ -138,4 +138,4 @@ for department in departments:
   for employer in department['employers']:
     monthly_taxes = employer['salary_rub'] * taxes_in_departments[department['title'].lower()]/ 100
     employers_taxes[f'{employer["first_name"]} {employer["last_name"]}'] = monthly_taxes
-print(f"Сотрудник, за которого платят меньше всего налогов: {min(employers_taxes, key = employers_taxes.get)}")
+print(f"Сотрудник, за которого платят меньше всего налогов:  {min(employers_taxes, key = employers_taxes.get)}")
