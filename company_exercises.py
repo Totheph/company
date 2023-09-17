@@ -118,7 +118,7 @@ print(*(f"Сумма налогов, уплачиваемая {key}: {value}" fo
 #Вывести список всех сотредников с указанием зарплаты "на руки" и зарплаты с учётом налогов.
 for department in departments:
   for employer in department['employers']:
-    print(f"Зарплата {employer['first_name']} {employer['last_name']} составляет {employer['salary_rub']}; с учетом налогов: { employer['salary_rub'] - (employer['salary_rub'] * taxes_in_departments[department['title'].lower()])/ 100}")
+    print(f"Зарплата {employer['first_name']} {employer['last_name']} составляет {employer['salary_rub'] - (employer['salary_rub'] * taxes_in_departments[department['title'].lower()])/ 100}; с учетом налогов: {employer['salary_rub']}")
 
 
 #Вывести список отделов, отсортированный по месячной налоговой нагрузки.
